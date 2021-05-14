@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        欢迎你！年龄是{{age}}的{{name}}！<!--插值表达式{{}}-->
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',//element
+        //数据哪里来
+        data:{
+            name:'胡李江',//以后数据通过发送ajax请求获得
+            age:18
+        }
+    });//json格式的对象，使用{}包裹，放键值对，在js中键没有引号，多个键值对职之间使用，分隔
+</script>
+</html>

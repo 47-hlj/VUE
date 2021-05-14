@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
 </head>
 <body>
-
+    <div id="app">
+        <span>
+            {{title}} <!--{{}}插值表达式-->
+        </span>
+        <input type="text" v-model="title">
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el:'#app',
+        data:{
+            title:'hello vue'
+        }
+    });
+</script>
 </html>
