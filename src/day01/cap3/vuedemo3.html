@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-html/v-text属性</title>
+</head>
+<body>
+<div id="app">
+    <p v-once>
+        {{link}}
+    </p>
+    <input type="text" v-model="link">
+    <br>
+    <span v-html="mylink"></span>
+    <span v-text="mylink"></span>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            link:'http://www.baidu.com',
+            mylink:'<a href="http://www.github.com">Github</a>'
+        },
+    });
+</script>
+</html>
