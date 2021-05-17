@@ -6,23 +6,22 @@
 </head>
 <body>
     <div id="app">
+        {{title}}
+        <input type="text" v-model="title">
     </div>
 </body>
 <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
 <script>
     var v1=new Vue({
         el:'#app',
-        methods:{
-            getCurrentTime:function (){
-                return new Date();
-            }
+        data:{
+            title:"hello vue"
         },
-        computed:{
-            getCurrentTime1:function (){
-                return new Date();
+        watch:{
+            title:function (newValue,oldValue){
+                console.log(newValue+" "+oldValue);
             }
         }
-
     })
 </script>
 </html>
