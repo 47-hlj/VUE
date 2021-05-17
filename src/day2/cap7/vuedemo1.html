@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue生命周期</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        beforeCreated:function (){
+            console.log("beforeCreate");
+        },
+        created:function (){
+            console.log("created");
+        },
+        beforeMount:function (){
+            console.log("beforeMount");
+        },
+        mount:function (){
+            console.log("mount");
+        },
+        beforeUpdate:function (){
+            console.log("beforeUpdate");
+        },
+        update:function (){
+            console.log("update");
+        },
+        beforeDestroy:function (){
+            console.log("beforeDestroy");
+        },
+        destroyed:function (){
+            console.log("destroyed")
+        },
+    })
+
+</script>
+</html>
