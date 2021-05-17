@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的循环v-for遍历对象</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="value in student">{{value}}</li>
+            <hr>
+            <li v-for="(v,k,i) in student">{{v}}--{{k}}--{{i}}</li>
+            <hr>
+
+        </ul>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            student:{
+                name:'hlj',
+                age:22,
+            }
+        }
+    })
+</script>
+</html>
