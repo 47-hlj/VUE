@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue的循环v-for改进版，具有下标</title>
+</head>
+<body>
+<div id="app">
+    <li v-for="(a,i) in args" :key="i">{{i}}--{{a}}</li>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            args:[1,2,3,4,5,6]
+        }
+    })
+</script>
+</html>
