@@ -29,15 +29,12 @@
 </head>
 <body>
     <div id="app">
-        <div v-bind:class="{red:temp}" class="mydiv"></div>
-        <hr>
-        <div :class="myClassStyle" class="mydiv"></div>
-        <hr>
-        <div :class="mycolor" class="mydiv"></div>
-        <hr>
+        <div :style="[myStyle,{height:myHeight+'px'}]" class="mydiv"></div>
+
         <button type="button" @click="temp=!temp">点我</button>
 
-        <input type="text" v-model="mycolor">
+        颜色：<input type="text" v-model="bc"><br>
+        高度：<input type="text" v-model="myHeight">
     </div>
 </body>
 <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
@@ -47,13 +44,15 @@
         el:'#app',
         data:{
             temp:false,
+            bc:'blue',
+            mw:'mywidth',
             mycolor:'green',
+            myHeight:300,
         },
         computed:{
-            myClassStyle:function (){
+            myStyle:function (){
                 return {
-                    red:this.temp,
-                    mywidth:this.temp
+                    backgroundColor:this.bc
                 }
             }
         }

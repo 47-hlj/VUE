@@ -35,6 +35,13 @@
         <hr>
         <div :class="mycolor" class="mydiv"></div>
         <hr>
+<!--        <div :class="mycolor" :class="mw" class="mydiv"></div>-->
+        <!--多个样式组合-->
+        <div :class="[mycolor,mw]" class="mydiv"></div>
+
+        <hr>
+        <div :style="{backgroundColor:bc}" class="mydiv"></div>
+
         <button type="button" @click="temp=!temp">点我</button>
 
         <input type="text" v-model="mycolor">
@@ -47,6 +54,8 @@
         el:'#app',
         data:{
             temp:false,
+            bc:'blue',
+            mw:'mywidth',
             mycolor:'green',
         },
         computed:{
